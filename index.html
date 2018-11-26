@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+   
+    <title>ああああああ</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        //ボタン
+        $(function (){
+            $("#toggle").on("click", function () {
+                $("#target").fadeToggle("slow");
+            });
+        });
+
+        //マウスオーバー
+        $(document).ready(function () {
+
+            $("li").hover(
+                function () {
+                    $(this).append($("<span> ←</span>"));
+                },
+                function () {
+                    $(this).find("span:last").remove();
+                }
+            );
+
+        });
+
+        //スクロール
+        $(document).ready(function () {
+            $('#scroll').scrollTop(50);
+        });
+
+        
+    </script>
+
+    <style>
+        /* スクロール */
+        #scroll {
+            height: 80px;
+            overflow: auto;
+            border: 1px solid black;
+        }
+       
+    </style>
+   
+</head>
+
+<body>
+
+    <header>
+        <h1>ヘッダー</h1>
+    </header>
+
+   <div id="target">表示・非表示される要素</div>
+    <button id="toggle">切り替え</button>
+
+    <ul>
+        <li>あああ</li>
+        <li>いいい</li>
+        <li>ううう</li>
+        <li>えええ</li>
+    </ul>
+   
+        <div id="scroll">a<br />b<br />c<br />d<br />e<br />f<br />g<br />h<br />i<br />j<br /></div>
+
+</body>
+</html>
