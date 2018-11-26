@@ -35,7 +35,15 @@
             $('#scroll').scrollTop(50);
         });
 
-        
+        //フェードイン
+        $(document).ready(function () {
+
+            $(document.body).click(function () {
+                $("div:hidden:first").fadeIn("slow");
+            });
+
+        })
+
     </script>
 
     <style>
@@ -45,7 +53,23 @@
             overflow: auto;
             border: 1px solid black;
         }
-       
+
+        span {
+            color: red;
+            cursor: pointer;
+        }
+
+        #box {
+            margin: 3px;
+            width: 80px;
+            display: none;
+            height: 80px;
+            float: left;
+            background: #f00;
+        }
+
+            
+
     </style>
    
 </head>
@@ -67,6 +91,12 @@
     </ul>
    
         <div id="scroll">a<br />b<br />c<br />d<br />e<br />f<br />g<br />h<br />i<br />j<br /></div>
+
+    <span>Click here...</span>
+
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
 
 </body>
 </html>
